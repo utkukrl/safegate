@@ -1,0 +1,24 @@
+proxy:
+  target: "http://localhost"
+  port: "8080"
+
+firewall:
+  ip_whitelist:
+    - "127.0.0.1/32"
+    - "::1/128"
+
+rate_limit:
+  enabled: true
+  rate: "100r/s"
+  burst: 200
+
+jwt:
+  enabled: false           
+  secret_key: "your-key" 
+  
+dashboard:
+  enabled: true
+  port: "3000"
+
+repl:
+  enabled: true
